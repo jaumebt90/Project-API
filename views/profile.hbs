@@ -1,0 +1,12 @@
+<h1>Bienvenido {{user.username}}</h1>
+<div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5"></div>
+    {{#each user.favorites}}
+    <img src={{image}} alt={{name}} />
+    <p>{{name}}</p>
+    <form action="/delete-favorite" method="POST">
+        <input type="hidden" name="id" value={{_id}} />
+
+        <button type="submit">borrar favorito</button>
+    </form>
+    {{/each}}
+</div>
