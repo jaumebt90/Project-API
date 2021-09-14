@@ -20,7 +20,6 @@ router.post("/add-favorite", isLoggedIn, (req, res) => {
   const query = ({ name, status, species, gender, image, apiId } = req.body);
   const idToCheck = req.body.apiId;
   Character.find({ apiId: idToCheck }).then((charArray) => {
-    //comprobar si ese apiId ya esta en db characters
     if (charArray.length === 0) {
       Character.create(query)
         .then((result) => {

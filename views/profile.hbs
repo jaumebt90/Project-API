@@ -1,19 +1,22 @@
-<div class="container">
-  <h1>Bienvenido {{user.username}}</h1>
-  <div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5">
-    {{#each user.favorites}}
-      <div class="col">
-        <div class="card shadow-sm">
-          <img src={{image}} alt="" />
-          <p>{{name}}</p>
-          <p>{{homeworld}}</p>
-          <form action="/delete-favorite" method="POST">
-            <input type="hidden" name="id" value={{_id}} />
+<section class="profile">
+  <div class="container">
+    <h1 class="user">Bienvenido {{user.username}}</h1>
+    <div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5">
+      {{#each user.favorites}}
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src={{image}} alt="" />
+            <h5>{{name}}</h5>
+            <p>{{species}}</p>
+            <p>{{homeworld}}</p>
+            <form action="/delete-favorite" method="POST">
+              <input type="hidden" name="id" value={{_id}} />
 
-            <button type="submit">borrar favorito</button>
-          </form>
+              <button type="submit">Delete Favourite</button>
+            </form>
+          </div>
         </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
-</div>
+</section>

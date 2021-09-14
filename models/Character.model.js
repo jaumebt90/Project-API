@@ -3,7 +3,6 @@ const { Schema, model } = require("mongoose");
 const characterSchema = new Schema(
   {
     name: String,
-    status: String,
     species: String,
     series: String,
     gender: String,

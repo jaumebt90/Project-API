@@ -1,15 +1,65 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url(../images/High_resolution_wallpaper_background_ID_77701160208.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .index {
-  background-image: url("../images/dbback.png");
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding-top: 300px;
+}
+
+.principal {
+  font-size: 70px;
+  font-style: oblique;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  color: white;
+  display: grid;
+  padding-top: 300px;
+}
+
+.titologin {
+  margin-left: 95px;
+  margin-bottom: 30px;
+}
+
+.signup {
+  display: flex;
+  justify-content: center;
+  color: white;
+  display: grid;
+  padding-top: 300px;
+}
+
+.titolsignup {
+  margin-left: 155px;
+  margin-bottom: 30px;
+}
+
+.user {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.card {
 }
 
 a {
   color: #00b7ff;
-}
-
-h1 {
-  color: 15px;
 }
