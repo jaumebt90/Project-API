@@ -1,12 +1,19 @@
-<h1>Bienvenido {{user.username}}</h1>
-<div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5"></div>
+<div class="container">
+  <h1>Bienvenido {{user.username}}</h1>
+  <div class="row row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5">
     {{#each user.favorites}}
-    <img src={{image}} alt={{name}} />
-    <p>{{name}}</p>
-    <form action="/delete-favorite" method="POST">
-        <input type="hidden" name="id" value={{_id}} />
+      <div class="col">
+        <div class="card shadow-sm">
+          <img src={{image}} alt="" />
+          <p>{{name}}</p>
+          <p>{{homeworld}}</p>
+          <form action="/delete-favorite" method="POST">
+            <input type="hidden" name="id" value={{_id}} />
 
-        <button type="submit">borrar favorito</button>
-    </form>
+            <button type="submit">borrar favorito</button>
+          </form>
+        </div>
+      </div>
     {{/each}}
+  </div>
 </div>
