@@ -28,6 +28,7 @@ body {
 .titologin {
   margin-left: 95px;
   margin-bottom: 30px;
+  font-style: oblique;
 }
 
 .signup {
@@ -41,6 +42,7 @@ body {
 .titolsignup {
   margin-left: 155px;
   margin-bottom: 30px;
+  font-style: oblique;
 }
 
 .user {
@@ -55,9 +57,7 @@ body {
   justify-content: center;
   color: white;
   margin-top: 20px;
-}
-
-.card {
+  font-style: oblique;
 }
 
 a {

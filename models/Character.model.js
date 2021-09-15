@@ -4,9 +4,8 @@ const characterSchema = new Schema(
   {
     name: String,
     species: String,
-    series: String,
     gender: String,
-    planet: String,
+    homeworld: String,
     image: String,
     apiId: Number,
   },

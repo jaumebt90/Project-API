@@ -6,9 +6,9 @@
         <div class="col">
           <div class="card shadow-sm">
             <img src={{image}} alt="" />
-            <h5>{{name}}</h5>
-            <p>{{species}}</p>
-            <p>{{homeworld}}</p>
+            <h5><u>Name:</u> {{name}}</h5>
+            <p><u>Specie:</u> {{species}}</p>
+            <p><u>Homeworld:</u> {{homeworld}}</p>
             <form action="/delete-favorite" method="POST">
               <input type="hidden" name="id" value={{_id}} />
 

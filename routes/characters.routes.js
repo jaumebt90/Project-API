@@ -10,14 +10,16 @@ const CharactersAPI = new Api();
 router.get("/characters", (req, res) => {
   CharactersAPI.getAllCharacters()
     .then((allCharacters) => {
-      //res.send(allCharacters.data);
+      //console.log(allCharacters.data);
       res.render(`characters/list`, { characters: allCharacters.data });
     })
     .catch((err) => console.log(err));
 });
 
 router.post("/add-favorite", isLoggedIn, (req, res) => {
-  const query = ({ name, status, species, gender, image, apiId } = req.body);
+  //console.log(req.body);
+  //return;
+  const query = ({ name, species, gender, homeworld, image, apiId } = req.body);
   const idToCheck = req.body.apiId;
   Character.find({ apiId: idToCheck }).then((charArray) => {
     if (charArray.length === 0) {
