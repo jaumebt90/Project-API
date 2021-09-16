@@ -5,14 +5,16 @@
       {{#each user.favorites}}
         <div class="col">
           <div class="card shadow-sm">
-            <img src={{image}} alt="" />
-            <h5><u>Name:</u> {{name}}</h5>
-            <p><u>Specie:</u> {{species}}</p>
-            <p><u>Homeworld:</u> {{homeworld}}</p>
-            <form action="/delete-favorite" method="POST">
+            <img class="pic" src={{image}} alt="" />
+            <div class="info">
+              <h5><u>Name:</u> {{name}}</h5>
+              <p><u>Specie:</u> {{species}}</p>
+              <p><u>Homeworld:</u> {{homeworld}}</p>
+            </div>
+            <form class="boton" action="/delete-favorite" method="POST">
               <input type="hidden" name="id" value={{_id}} />
 
-              <button type="submit">Delete Favourite</button>
+              <button class="delete" type="submit">Delete Favourite</button>
             </form>
           </div>
         </div>

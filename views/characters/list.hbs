@@ -5,12 +5,14 @@
     {{! image name status }}
     {{#each characters}}
       <div class="col">
-        <div class="card shadow-sm">
-          <img src="{{image}}" alt="" />
-          <h5><u>Name:</u> {{name}}</h5>
-          <p><u>Specie:</u> {{species}}</p>
-          <p><u>Homeworld:</u> {{homeworld}}</p>
-          <form action="/add-favorite" method="POST">
+        <div class="card">
+          <img class="pic" src="{{image}}" alt="" />
+          <div class="info">
+            <h5><u>Name:</u> {{name}}</h5>
+            <p><u>Specie:</u> {{species}}</p>
+            <p><u>Homeworld:</u> {{homeworld}}</p>
+          </div>
+          <form class="boton" action="/add-favorite" method="POST">
 
             <input type="hidden" name="name" value="{{name}}" />
             <input type="hidden" name="species" value="{{species}}" />
@@ -19,7 +21,7 @@
             <input type="hidden" name="image" value="{{image}}" />
             <input type="hidden" name="apiId" value="{{id}}" />
 
-            <button type="submit">Add to Favourites</button>
+            <button class="add" type="submit">Add to Favourites</button>
           </form>
         </div>
       </div>

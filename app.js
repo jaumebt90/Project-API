@@ -14,7 +14,7 @@ const projectName = "Proyecto-API";
 const capitalized = (string) =>
   string[0].toUpperCase() + string.slice(1).toLowerCase();
 
-app.locals.title = "Empire Star Wars";
+app.locals.title = "Star Wars World";
 
 //app.locals.subtitle = "I'am the subtitle";
 
