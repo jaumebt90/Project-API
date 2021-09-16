@@ -76,7 +76,8 @@ a {
 }
 
 .pic {
-  height: 600px;
+  object-fit: scale-down;
+  height: 300px;
   width: 400px;
   border-radius: 50px;
 }
