@@ -2,7 +2,6 @@
   <h1 class="list">Characters list</h1>
 
   <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-5 my-5">
-    {{! image name status }}
     {{#each characters}}
       <div class="col">
         <div class="card">
@@ -19,7 +18,6 @@
             <input type="hidden" name="homeworld" value="{{homeworld}}" />
             <input type="hidden" name="image" value="{{image}}" />
             <input type="hidden" name="apiId" value="{{id}}" />
-
             <button class="add" type="submit">Add to Favourites</button>
           </form>
         </div>
